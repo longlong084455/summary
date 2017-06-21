@@ -1,0 +1,10 @@
+1.创建用户 longlong
+2.visudo  修改文件76行        root  ALL=(ALL)  ALL
+                                    增加  longlong ALL=(ALL)   ALL
+现在可以通过sudo  来使longlong用户执行root用户的权限   sudo tail -n 1 /etc/shadow
+
+
+创建用户组    groups   
+visudo   修改84行      %wheel  ALL=(ALL)  ALL
+                           修改 %groups  ALL=(ALL) ALL
+现在只要在groups用户组里的用户都可以通过sudo来执行root权限

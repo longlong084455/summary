@@ -1,0 +1,5 @@
+参考资源： http://www.cnblogs.com/h--d/tag/
+Nginx : http://nginx.org/en/download.html
+Jenkins : http://mirrors.jenkins-ci.org/war/latest/
+下载android SDK：http://developer.android.com/sdk/index.html
+http://tools.android-studio.org/index.php/sdk/

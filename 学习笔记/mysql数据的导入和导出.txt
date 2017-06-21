@@ -1,0 +1,44 @@
+在命令行下mysql的数据导出有个很好用命令mysqldump,它的参数有一大把,可以这样查看: 
+mysqldump 
+
+最常用的: 
+mysqldump -uroot -pmysql databasefoo table1 table2 > foo.sql 
+
+这样就可以将数据库databasefoo的表table1,table2以sql形式导入foo.sql中,其中-uroot参数表示访问数据库的用户名是root,如果有密码还需要加上-p参数 
+
+C:\Users\jack> mysqldump -uroot -pmysql sva_rec date_drv > e:\date_drv.sql 
+
+mysql的数据导入也是相当便捷的,如: 
+mysql -uroot databasefoo < foo.sql 
+
+这样就可以将foo.sql的数据全部导入数据库databasefoo 
+
+
+
+
+
+     1.导出整个数据库 
+
+　　mysqldump -u用户名 -p密码  数据库名 > 导出的文件名 
+　　C:\Users\jack> mysqldump -uroot -pmysql sva_rec  > e:\sva_rec.sql 
+
+　　2.导出一个表，包括表结构和数据 
+
+　　mysqldump -u用户名 -p 密码  数据库名 表名> 导出的文件名 
+　　C:\Users\jack> mysqldump -uroot -pmysql sva_rec date_rec_drv> e:\date_rec_drv.sql 
+
+　　3.导出一个数据库结构 
+　　C:\Users\jack> mysqldump -uroot -pmysql -d sva_rec > e:\sva_rec.sql 
+
+     4.导出一个表，只有表结构 
+　　mysqldump -u用户名 -p 密码 -d数据库名  表名> 导出的文件名 
+　　C:\Users\jack> mysqldump -uroot -pmysql -d sva_rec date_rec_drv> e:\date_rec_drv.sql 
+
+　　5.导入数据库 
+
+　　常用source 命令 
+　　进入mysql数据库控制台， 
+　　如mysql -u root -p 
+　　mysql>use 数据库 
+　　然后使用source命令，后面参数为脚本文件(如这里用到的.sql) 
+　　mysql>source d:wcnc_db.sql

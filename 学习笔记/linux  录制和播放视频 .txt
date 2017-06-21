@@ -1,0 +1,21 @@
+script 可以整个终端会话的所有操作和输出录制下来,并可以通过 scriptreplay 进行播放. 
+在你需要将你的在终端优雅的操作展示给别人看的时候,script就非常有用了!
+
+
+录制命令: 
+script -t 2>example.time -a example.txt
+
+播放命令:
+scriptreplay example.time example.txt
+
+
+简单解释一下这行命令:
+
+-t是把时间数据输出到标准错误(standard error), 所以这里使用2>example.time 把数据转向到 example.time这个文件当中.
+
+
+-a 选项则指定输出录制的文件.
+
+在录制过程中,使用 exit 结束录制过程.
+
+script命令没有图片不好截图因为它是动态的,这个这个最终效果也真的非常华丽,用过的人才会懂!

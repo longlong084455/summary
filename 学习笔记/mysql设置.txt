@@ -1,0 +1,16 @@
+目录： /var/lib/mysql
+root密码： 123456
+忘记root密码的解决办法：
+关闭mysql服务   service mysqld stop
+     在/etc/my.conf  中增加一行 mysqld_safe --user=root --skip-grant-tables
+     执行命令  mysql -u root  进入mysql
+     use mysql
+     更改root密码： update user set password=password("new_pass") where user="root";
+     flush privileges; 
+
+
+配置远程连接
+更改配置文件： /etc/my.conf  增加bind-address=YOUR-SERVER-ADDR
+
+向数据表user中增加一列
+host = '%' user='root' 其他权限权威Y的数据

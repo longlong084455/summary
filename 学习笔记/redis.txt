@@ -1,0 +1,20 @@
+目录地址 /usr/local/redis/redis-3.2.5/ 安装地址
+启动redis服务地址 /usr/local/redis/bin/redis-server 
+     后台启动redis （需要指定配置文件）  cd /usr/local/redis/bin
+					 ./redis-server /usr/local/redis/etc/redis.conf  
+启动客户端  cd /usr/local/redis/bin
+	    ./redis-cli
+
+退出客户端   exit 
+
+
+关闭客户端 /usr/local/redis/bin/     
+	   redis-cli shutdown 
+
+
+关闭服务器端  /usr/local/redis/bin/     
+	      pkill redis-server
+
+
+
+设置后台启动 修改redis.conf 文件里的daemonize 为 yes 

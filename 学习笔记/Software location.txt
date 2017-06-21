@@ -1,0 +1,5 @@
+jDK :   /usr/local/jdk 
+maven :  /tmp
+tomcat :  /usr/local
+SVN :   版本库目录   /opt/svn/repositor/
+存放tar.gz压缩文件的目录：  /home/ftp_source/tar.gz/
